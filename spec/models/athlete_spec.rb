@@ -15,8 +15,9 @@ RSpec.describe Athlete, type: :model do
     end
   end
 
-  describe 'Attachmen' do
+  describe 'Attachment' do
    it 'is valid  ' do
+     binding.pry
      subject.image.attach(io: File.open(fixture_path + '/dummy_image.jpg'), filename: 'dummy_image.jpg', content_type: 'image/jpg')
      expect(subject.image).to be_attached
    end

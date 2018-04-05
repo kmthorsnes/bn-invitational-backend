@@ -7,6 +7,7 @@ RSpec.describe Athlete, type: :model do
     it {is_expected.to have_db_column :age}
     it {is_expected.to have_db_column :start_time}
     it {is_expected.to have_db_column :has_raced}
+    it {is_expected.to have_attribute :image}
   end
 
   describe 'Factory' do
@@ -16,10 +17,10 @@ RSpec.describe Athlete, type: :model do
   end
 
   describe 'Attachment' do
-   it 'is valid  ' do
-     binding.pry
-     subject.image.attach(io: File.open(fixture_path + '/dummy_image.jpg'), filename: 'dummy_image.jpg', content_type: 'image/jpg')
-     expect(subject.image).to be_attached
+    let(:athlete){create(:athlete)}
+   it 'is valid' do
+     athlete.image.attach(io: File.open(fixture_path + '/dummy_image.jpg'), filename: 'dummy_image.jpg', content_type: 'image/jpg')
+     expect(athlete.image).to be_attached
    end
  end
 end

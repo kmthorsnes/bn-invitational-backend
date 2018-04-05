@@ -6,4 +6,5 @@
 "age" => athlete.age,
 "home" => "#{athlete.home}",
 "start-time" => athlete.start_time
+"image" => object.image.service_url(expires_in: 1.hour, disposition: "inline")
 }}}

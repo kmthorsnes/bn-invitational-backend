@@ -5,9 +5,13 @@ ruby '2.3.4'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'aws-sdk-s3', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
 gem 'devise_token_auth'
+gem 'jquery-rails'
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'popper_js', '~> 1.12.9'
+
 gem 'puma', '~> 3.11'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 5.2.0.rc2'
